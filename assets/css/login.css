@@ -1,55 +1,78 @@
-html,
-body {
+body,html{
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  background: url('/assets/images/login_bg.jpg') no-repeat center;
-  background-size: cover;
+  height: 100%;
+  /* background: url('/assets/images/login_bg.jpg') no-repeat center; */
+  background-color:#0db2bf;
+  background-size:  cover;
 }
-
-.loginAndRegBox {
+.logo_Regbox{
   width: 400px;
   height: 310px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, .8);
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px white;
 }
-
-.title-box {
+.logo_title{
   height: 60px;
   background: url('/assets/images/login_title.png') no-repeat center;
 }
-
-.reg-box {
-  display: none;
-}
-
-.layui-form {
+.layui-form{
+  margin-top: 15px;
   padding: 0 30px;
+ 
 }
-
-.links {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.links a {
-  font-size: 12px;
-}
-
-.layui-form-item {
+.layui-form-item{
   position: relative;
+  margin-bottom: 15px;
 }
-
-.layui-icon {
+.layui-input{
+  padding-left: 32px;
+  border-radius: 8px;
+  /* opacity: .5; */
+  background-color:rgba(255, 255, 255, .8);
+}
+.layui-icon{
   position: absolute;
   left: 10px;
   top: 10px;
 }
+.layui-form-item{
+  display: flex;
+  justify-content: flex-end;
+}
+.layui-form-item button{
+  border-radius: 50px;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3d,#03a9f4);
+  background-size: 400%;
+  height: 56px;
+  /* opacity: .5; */
+  z-index: 1;
+  animation: sun 8s infinite linear;
 
-.layui-input {
-  padding-left: 32px;
+}
+.layui-form-item button::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3d,#03a9f4);
+  background-size: 400%;
+  filter: blur(15px);
+  z-index: -5;
+  animation: sun 8s infinite linear;
+
+}
+
+@keyframes sun{
+  100%{
+    background-position: -400%;
+  }
 }
