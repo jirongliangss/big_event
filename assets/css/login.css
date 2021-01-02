@@ -9,7 +9,7 @@ body,html{
 }
 .logo_Regbox{
   width: 400px;
-  height: 310px;
+  height: 330px;
   background-color: rgba(255, 255, 255, .8);
   position: absolute;
   top: 50%;
@@ -69,6 +69,10 @@ body,html{
   z-index: -5;
   animation: sun 8s infinite linear;
 
+}
+
+#form_reg{
+  display: none;
 }
 
 @keyframes sun{
