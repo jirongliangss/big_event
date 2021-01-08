@@ -11,7 +11,7 @@ $(function() {
     rePwd: function(value) {
       if (value !== $('[name=newPwd]').val()) {
         return '两次密码不一致！'
-      }
+      } 
     }
   })
 

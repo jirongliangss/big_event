@@ -61,6 +61,7 @@ $(function () {
             method: 'GET',
             url: '/my/article/cates/' + id,
             success: function (res) {
+                console.log(res.data);
                 form.val('form-edit', res.data)
             }
         })
@@ -101,6 +102,8 @@ $(function () {
             })
         })
     })
+
+
 
     
 })
